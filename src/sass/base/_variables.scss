@@ -1,0 +1,35 @@
+:root {
+  --Orange65: #FF8D4C;
+  --Orange70: #FF9E66;
+  --Orange75: #FFAE80;
+  --Orange80: #FFBE99;
+  --Orange90: #FFDECC;
+  --Orange95: #FFEFE5;
+  --Orange97: #FFF5F0;
+  --Orange99: #FFFCFA;
+
+  --Grey10: #1A1A1A;
+  --Grey15: #262626;
+  --Grey20: #333333;
+  --Grey30: #4C4C4D;
+  --Grey35: #59595A;
+  --Grey40: #656567;
+  --Grey60: #98989A;
+  --Grey70: #B3B3B3;
+}
+// переменные для контейнера (паддинги и ширина)
+$breakpoints: (
+  s390: 390px,
+  s1440: 1440px
+);
+
+$container-top: ( 
+  base: 50px,
+  s390: 16px
+);
+
+$container: ( 
+  base: 164px,
+  s390: 16px,
+  s1440: 80px
+);

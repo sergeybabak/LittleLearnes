@@ -1,0 +1,18 @@
+.footer {
+    margin-top: 200px;
+    padding: 100px 113px 40px 113px;
+
+    &__promo {
+        font-size: 20px;
+        font-weight: 500;
+
+        &-box {
+            padding: 8px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--Grey15);
+            border-radius: 6px;
+            background: var(--Orange97);
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.mainreviews {
+    margin-top: 200px;
+
+    .slider {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        .arrow_right,
+        .arrow_left {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--Grey20);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &__wrapper {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            gap: 39px;
+            padding-bottom: 20px;
+        }
+
+        &__item {
+            padding: 50px;
+            width: calc(33% - 26px);
+            height: 98%;
+            text-align: center;
+            color: var(--Grey20);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+            flex-shrink: 0;
+            transition: all 0.5s ease-in-out;
+
+            &-img {
+                margin: 0 auto;
+                width: 80px;
+                height: 80px;
+                border: 1px solid var(--Grey20);
+                border-radius: 100px;
+                background: var(--Orange97);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+
+            &-name {
+                margin-top: 15px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            &-rang {
+                display: flex;
+                gap: 5px;
+                margin: 30px 0;
+                justify-content: center;
+
+                span {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: url('/src/icons/main/slider/Shape.svg');
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .mainreviews {
+        margin-top: 150px;
+
+        .slider {
+            margin-top: 80px;
+            gap: 40px;
+
+            .arrow_right,
+            .arrow_left {
+                width: 48px;
+                height: 48px;
+            }
+
+            &__item {
+                padding: 40px;
+                font-size: 16px;
+                width: 333px;
+
+                &-img {
+                    width: 66px;
+                    height: 66px;
+
+                    img {
+                        width: 46px;
+                        height: 46px;
+                    }
+                }
+
+                &-name {
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+
+                &-rang {
+                    margin: 24px 0;
+
+                    span {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mainreviews {
+        .slider {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            &__wrapper {
+                order: 1;
+                flex: 0 0 100%;
+            }
+            .arrow_right,
+            .arrow_left {
+                align-self: start;
+                order: 2;
+            }
+        }
+    }
+}

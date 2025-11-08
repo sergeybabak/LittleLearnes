@@ -1,0 +1,17 @@
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/base/fonts";
+@use "/src/sass/base/variables";
+@use "/src/sass/base/mixins";
+@use "/src/sass/base/animation";
+@use "/src/sass/blocks/global";
+
+@use "/src/sass/ui/boxes";
+@use "/src/sass/ui/titles.scss";
+
+@use "/src/sass/blocks/header";
+@use "/src/sass/blocks/main/mainpromo";
+@use "/src/sass/blocks/main/mainbenefits";
+@use "/src/sass/blocks/main/mainreviews";
+@use "/src/sass/blocks/main/mainquestions";
+@use "/src/sass/blocks/main/mainnavigate";
+@use "/src/sass/blocks/footer";

@@ -1,0 +1,102 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.btn-default {
+    @include button;
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.btn-send {
+    @include button;
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+
+    &:focus {
+        outline: 1px solid $brown;
+        border: 1px solid $brown;
+    }
+
+    &:disabled {
+        outline: 1px solid $grey;
+        color: $grey;
+        border: 1px solid $grey;
+    }
+}
+
+.btn-submit {
+    @include button;
+    width: 90px;
+    height: 40px;
+    color: $white;
+    border: 1px solid $white;
+
+    &:disabled {
+        outline: 1px solid $grey;
+        color: $grey;
+        border: none;
+    }
+}
+
+.btn-read {
+    @include button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+    &:focus {
+        outline: 1px solid $brown;
+        border: 1px solid $brown;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .btn-default {
+        &:hover {
+            background-color: $dark;
+            color: $white;
+        }
+
+        &:active {
+            background: rgba(217, 217, 217, 0.1);
+            box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+            color: $dark;
+            border: none;
+        }
+    }
+
+    .btn-send {
+        &:active {
+            outline: 1px solid $brown;
+            border: 1px solid $brown;
+        }
+
+        &:hover {
+            outline: 1px solid $brown;
+            border: 1px solid $brown;
+            color: $brown;
+        }
+    }
+    
+    .btn-read {
+        &:active {
+            outline: 1px solid $brown;
+            border: 1px solid $brown;
+        }
+
+        &:hover {
+            outline: 1px solid $brown;
+            border: 1px solid $brown;
+            color: $brown;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .btn-default {
+        width: 330px;
+        height: 60px;
+    }
+}

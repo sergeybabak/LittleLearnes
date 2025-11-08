@@ -1,0 +1,50 @@
+// Анимация гамбургера
+
+@keyframes span1-inCenter {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(7px) rotate(0); }
+  100% { transform: translateY(7px) translateX(4px) rotate(45deg); }
+}
+
+@keyframes span3-inCenter {
+  0% { opacity: 1; }
+  50% { transform: translateY(-7px) rotate(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes span2-inCenter {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(0) rotate(0); }
+  100% { transform: translateY(0) translateX(4px) rotate(-45deg); }
+}
+
+/* Обратные анимации */
+@keyframes span1-outCenter {
+  0% { transform: translateY(7px) translateX(4px) rotate(45deg); }
+  50% { transform: translateY(7px) rotate(0); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+@keyframes span2-outCenter {
+  0% { transform: translateY(0) translateX(4px) rotate(-45deg); }
+  50% { transform: translateY(0) rotate(0); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+@keyframes span3-outCenter {
+  0% { opacity: 0; }
+  50% { transform: translateY(-7px) rotate(0); }
+  100% { opacity: 1; }
+  // 100% { transform: translateY(-7px) rotate(0); }
+}
+
+// временное увеличение шрифта при клике на пункт меню
+@keyframes fontAnime {
+    0%, 100% {
+        // font-size: 25px;
+    }
+    50% {
+      scale: 1.2;
+        // font-size: 32px;
+    }
+}

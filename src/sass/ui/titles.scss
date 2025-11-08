@@ -1,0 +1,61 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.title-box {
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    background: White;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.title-h2 {
+    margin-top: 30px;
+    color: var(--Grey10);
+    font-family: Raleway;
+    font-size: 58px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title-sub {
+    margin: 25px auto 0 auto;
+    max-width: 990px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1440px) {
+    .title-box {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+    .title-h2 {
+        margin-top: 20px;
+        font-size: 48px;
+    }
+    .title-sub {
+        max-width: 870px;
+        margin: 15px auto 0 auto;
+        margin-top: 14px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-box {
+        font-size: 14px;
+    }
+    .title-h2 {
+        margin-top: 10px;
+        font-size: 38px;
+    }
+    .title-sub {
+        margin-top: 14px;
+        font-size: 16px;
+    }
+}

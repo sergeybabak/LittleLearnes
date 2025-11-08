@@ -1,0 +1,59 @@
+@use "sass:map";
+@use '/src/sass/base/variables' as variables;
+
+// для container
+@mixin respond($breakpoint) {
+  @media (max-width: map.get(variables.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin boxWithCardBefore($icon) {
+  padding: 80px 50px 50px 50px;
+  color: var(--Grey30);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  position: relative;
+
+  span {
+    display: block;
+    color: var(--Grey10);
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -37px;
+    left: 30px;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--Grey15);
+    border-radius: 12px;
+    background: var(--Orange90) url($icon) no-repeat center/31px;
+  }
+}
+
+// @mixin card-before($icon) {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: -37px;
+//     left: 30px;
+//     width: 74px;
+//     height: 74px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: 2px solid var(--Grey15);
+//     border-radius: 12px;
+//     background: var(--Orange90) url($icon) no-repeat center/31px;
+//   }
+// }

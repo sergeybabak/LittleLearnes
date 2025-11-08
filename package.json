@@ -1,0 +1,25 @@
+{
+  "name": "littlelearnes",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "vite.config.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "sass": "^1.93.2",
+    "vite": "^6.3.6",
+    "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "heroicons": "^2.2.0"
+  }
+}

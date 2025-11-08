@@ -1,0 +1,96 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.mainbenefits {
+    margin-top: 200px;
+
+    &__wrapper {
+        margin-top: 135px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 85px 37px;
+    }
+
+    &__item {
+        &:nth-child(1) {
+            @include boxWithCardBefore('/src/icons/main/01.png');
+        }
+
+        &:nth-child(1) {
+            @include boxWithCardBefore('/src/icons/main/01.png');
+        }
+
+        &:nth-child(2) {
+            @include boxWithCardBefore('/src/icons/main/02.png');
+        }
+
+        &:nth-child(3) {
+            @include boxWithCardBefore('/src/icons/main/03.png');
+        }
+
+        &:nth-child(4) {
+            @include boxWithCardBefore('/src/icons/main/04.png');
+        }
+
+        &:nth-child(5) {
+            @include boxWithCardBefore('/src/icons/main/05.png');
+        }
+
+        &:nth-child(6) {
+            @include boxWithCardBefore('/src/icons/main/06.png');
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .mainbenefits {
+        margin-top: 150px;
+
+        &__wrapper {
+            margin-top: 108px;
+            gap: 65px 40px;
+        }
+
+        &__item {
+            font-size: 16px;
+            padding: 60px 40px 40px 40px;
+
+            &:nth-child(n)::before {
+                width: 56px;
+                height: 56px;
+                background-size: 24px;
+            }
+
+            &-title {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mainbenefits {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainbenefits {
+        margin-top: 80px;
+
+        &__wrapper {
+            margin-top: 78px;
+            grid-template-columns: 100%;
+        }
+
+        &__item {
+            padding: 50px 30px 30px 30px;
+
+            &-title {
+                font-size: 22px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

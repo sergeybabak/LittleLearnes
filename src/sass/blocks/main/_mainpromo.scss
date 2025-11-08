@@ -1,0 +1,151 @@
+.mainpromo {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    column-gap: 50px;
+    align-items: center;
+
+    &__img {
+        max-width: 765px;
+        height: auto;
+        width: 48%;
+        object-fit: contain;
+    }
+
+    &__rightbox {
+        // padding: 142px 0;
+        font-size: 20px;
+        font-weight: 500;
+        flex: 1;
+
+        &-title {
+            font-family: Raleway;
+            font-size: 54px;
+            font-weight: 800;
+
+            span {
+                color: var(--Orange65);
+            }
+        }
+
+        p {
+            margin: 30px 0 60px 0;
+        }
+    }
+
+    h1 {
+        font-size: 22px;
+        font-weight: 500;
+        width: fit-content;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--Grey15);
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 50px;
+        background: var(--Orange95);
+
+        &-item {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        span {
+            display: block;
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .mainpromo {
+        margin-top: 60px;
+
+        &__rightbox {
+            font-size: 16px;
+
+            h1 {
+                font-size: 18px;
+            }
+
+            &-title {
+                font-size: 40px;
+            }
+
+            p {
+                margin: 20px 0 50px 0;
+            }
+        }
+
+        &__box {
+            &-item {
+                font-size: 16px;
+            }
+
+            span {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mainpromo {
+        margin-top: 50px;
+        flex-direction: column;
+
+        &__img {
+            width: 60%;
+        }
+
+        &__rightbox {
+            width: 80%;
+            text-align: center;
+            h1 {
+                margin: 35px auto 0 auto;
+            }
+            &-title {
+                margin-top: 20px;
+            }
+            p {
+                margin: 20px 0 40px 0;
+            }
+        }
+        &__box {
+            padding: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainpromo {
+        &__img {
+            max-width: unset;
+            width: 100%;
+        }
+        &__rightbox {
+            width: 100%;
+            h1 {
+                font-size: 16px;
+            }
+            &-title {
+                font-size: 30px;
+            }
+        }
+        &__box {
+            flex-direction: column;
+            padding: 20px 40px;
+            &-item {
+                padding: 20px 0;
+                &:nth-child(2) {
+                    border-top: 2px solid var(--Grey15);
+                    border-bottom: 2px solid var(--Grey15);
+                }
+            }
+        }
+    }
+}
