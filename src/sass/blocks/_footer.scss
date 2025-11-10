@@ -2,9 +2,34 @@
     margin-top: 200px;
     padding: 100px 113px 40px 113px;
 
+    &__top {
+        display: flex;
+        column-gap: 80px;
+    }
+
     &__promo {
+        width: 50%;
         font-size: 20px;
         font-weight: 500;
+
+        &-descr {
+            margin-top: 20px;
+        }
+
+        &-email {
+            margin-top: 50px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &-phone,
+        &-map {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
         &-box {
             padding: 8px;
@@ -13,6 +38,209 @@
             border: 2px solid var(--Grey15);
             border-radius: 6px;
             background: var(--Orange97);
+        }
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+
+        &-title {
+            font-weight: 600;
+        }
+
+        &-list {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    &__links {
+        margin-top: 50px;
+        width: 100%;
+        padding: 45px 0;
+        border-top: 1px solid var(--Grey15);
+        border-bottom: 1px solid var(--Grey15);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__security {
+        &-link {
+            &:first-child {
+                padding-right: 15px;
+            }
+
+            &:last-child {
+                padding-left: 15px;
+            }
+
+            &:nth-child(2) {
+                padding: 0 15px 0 15px;
+                border-left: 1px solid var(--Grey15);
+                border-right: 1px solid var(--Grey15);
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 14px;
+
+        a {
+            display: block;
+            width: 56px;
+            height: 56px;
+            padding: 16px;
+            border: 2px solid var(--Grey15);
+            border-radius: 8px;
+            background: var(--Orange90);
+        }
+    }
+
+    &__bottom {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .footer {
+        margin-top: 150px;
+        padding: 80px 80px 40px 80px;
+
+        &__promo {
+            font-size: 16px;
+
+            &-descr {
+                margin-top: 16px;
+            }
+
+            &-email {
+                margin-top: 40px;
+            }
+
+            &-phone,
+            &-map {
+                margin-top: 20px;
+            }
+
+            &-box {
+                width: 32px;
+                height: 32px;
+                padding: 6px;
+            }
+        }
+
+        &__menu {
+            font-size: 16px;
+            gap: 20px;
+        }
+
+        &__links {
+            margin-top: 40px;
+            padding: 20px 0 20px 0;
+        }
+
+        &__buttons {
+            gap: 10px;
+
+            a {
+                width: 48px;
+                height: 48px;
+                padding: 12px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        &__bottom {
+            padding-top: 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 60px 30px 30px 30px;
+
+        &__menu {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__top {
+            flex-direction: column;
+        }
+
+        &__promo {
+            margin: 0 auto;
+            width: auto;
+
+            &-descr {
+                text-align: center;
+            }
+        }
+
+        &__logo {
+            width: fit-content;
+            margin: 0 auto;
+        }
+        &__menu {
+            margin-top: 40px;
+            column-gap: 30px;
+        }
+        &__links {
+            margin-top: 30px;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 10px 0;
+        }
+        &__security {
+            font-size: 13px;
+            &-link {
+            &:first-child {
+                padding-right: 2px;
+            }
+
+            &:last-child {
+                padding-left: 2px;
+            }
+
+            &:nth-child(2) {
+                padding: 0 2px 0 2px;
+            }
+        }
+        }
+        &__buttons {
+            a {
+                width: 42px;
+                height: 42px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+        &__bottom {
+            padding-top: 16px;
+            font-size: 14px;
         }
     }
 }
