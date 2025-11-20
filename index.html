@@ -24,55 +24,11 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body class="preload">
+<body class="preload" data-page="main">
 
     <div class="olerlay"></div>
 
-    <header>
-        <div class="container-top">
-            <div class="announcement">
-                <img src="/src/img/AbstractDesign2.png" alt="AbstractDesign2"
-                    class="announcement__img announcement__img-left">
-                <!-- <img src="/src//img/AbstractDesign1.png" alt="AbstractDesign1"
-                    class="announcement__img2 announcement__img2-left"> -->
-                <span class="announcement__text">
-                    <img src="/src//img/AbstractDesign1.png" alt="AbstractDesign1"
-                        class="announcement__img2 announcement__img2-left">
-                    Admission is Open, Grab your seat now
-                    <a href="./admissions.html" class="announcement__link" aria-label="Go to admissions page">
-                        <img src="/node_modules/heroicons/24/outline/arrow-right.svg" alt="Academic Cap"
-                            class="announcement__arrow">
-                    </a>
-                    <img src="/src//img/AbstractDesign1.png" alt="AbstractDesign1"
-                        class="announcement__img2 announcement__img2-right">
-                </span>
-                <!-- <img src="/src//img/AbstractDesign1.png" alt="AbstractDesign1"
-                    class="announcement__img2 announcement__img2-right"> -->
-                <img src="/src/img/AbstractDesign2.png" alt="AbstractDesign2"
-                    class="announcement__img announcement__img-right">
-            </div>
-
-            <nav class="navbar">
-                <div class="navbar__logo"><a href="#" class="logo"><img src="/src/img/Logo1920.png" alt="Logo"></a>
-                </div>
-                <nav class="navbar__menu">
-                    <div class="navbar__wrapper">
-                        <ul>
-                            <li class="navbar__menu-active">Home</li>
-                            <li>About Us</li>
-                            <li>Academics</li>
-                            <li>Admissions</li>
-                            <li>Student Life</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
-                    <div class="hamburger">
-                        <div class="hamburger__block"><span></span><span></span><span></span></div>
-                    </div>
-                </nav>
-        </div>
-        </div>
-    </header>
+    {{> header }}
 
     <main class="main">
         <div class="container">
@@ -106,7 +62,7 @@
                 </div>
             </section>
 
-            <section class="mainbenefits">
+            <section id="features" class="mainbenefits">
                 <div class="title-box">Children Deserve Bright Future</div>
                 <h2 class="title-h2">Our Benefits</h2>
                 <div class="title-sub">With a dedicated team of experienced educators,
@@ -142,7 +98,7 @@
                 </div>
             </section>
 
-            <section class="mainreviews">
+            <section id="testimonials" class="mainreviews">
                 <div class="title-box">Their Happy Words 🤗</div>
                 <h2 class="title-h2">Our Testimonials</h2>
                 <div class="title-sub">Our testimonials are heartfelt reflections of the nurturing
@@ -205,7 +161,7 @@
                 </div>
             </section>
 
-            <section class="mainquestions">
+            <section id="faq" class="mainquestions">
                 <div class="title-box">Solutions For The Doubts</div>
                 <h1 class="title-h2">Frequently Asked Questions</h1>
                 <div class="title-sub">Find all the essential information you need in our FAQ section, designed to
@@ -342,7 +298,7 @@
                                 passionate educators and our engaging approach to early education.</div>
                         </div>
 
-                        <a href="#" class="mainnavigate__item-btn box_blackshadow">
+                        <a href="{{ base }}about.html" class="mainnavigate__item-btn box_blackshadow">
                             <span class="mainnavigate__item-btntext">
                                 Learn More
                                 <img src="/node_modules/heroicons/24/outline/arrow-right.svg" alt="Arrow"
@@ -428,88 +384,7 @@
 
     </main>
     
-    <footer>
-        <div class="container-top">
-            <ul class="footer box_blackshadow">
-                <ul class="footer__top">
-                    <div class="footer__promo">
-                        <div class="footer__logo"><a href="#" class="logo"><img src="/src/img/Logo1920.png" alt="Logo"></a></div>
-
-                        <div class="footer__promo-descr">We believe in the power of play to foster creativity, problem-solving skills, and imagination.</div>
-
-                        <div class="footer__promo-email">
-                            <a href="#" class="footer__promo-box">
-                                <img src="/node_modules/heroicons/24/solid/envelope.svg" alt="envelope">
-                            </a>hello@littlelearners.com
-                        </div>
-                        <div class="footer__promo-phone">
-                            <a href="#" class="footer__promo-box">
-                                <img src="/node_modules/heroicons/24/solid/phone.svg" alt="phone">
-                            </a>+91 91813 23 2309
-                        </div>
-                        <div class="footer__promo-map">
-                            <a href="#" class="footer__promo-box">
-                                <img src="/node_modules/heroicons/24/solid/map-pin.svg" alt="map-pin">
-                            </a>Somewhere in the World
-                        </div>
-                    </div>
-
-                    <ul class="footer__menu">
-                        <li class="footer__menu-column">
-                            <a href="#" class="footer__menu-title">Home</a>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Features</a></li>
-                                <li class="footer__menu-item"><a href="#">Our Testimonials</a></li>
-                                <li class="footer__menu-item"><a href="#">FAQ</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="footer__menu-column">
-                            <a href="#" class="footer__menu-title">About Us</a>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Our Mission</a></li>
-                                <li class="footer__menu-item"><a href="#">Our Vission</a></li>
-                                <li class="footer__menu-item"><a href="#">Awards and Recognitions</a></li>
-                                <li class="footer__menu-item"><a href="#">History</a></li>
-                                <li class="footer__menu-item"><a href="#">Teachers</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="footer__menu-column">
-                            <a href="#" class="footer__menu-title">Academics</a>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Special Features</a></li>
-                                <li class="footer__menu-item"><a href="#">Gallery</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="footer__menu-column">
-                            <a href="#" class="footer__menu-title">Contact Us</a>
-                            <ul class="footer__menu-list">
-                                <li class="footer__menu-item"><a href="#">Information</a></li>
-                                <li class="footer__menu-item"><a href="#">Map & Direction</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </ul>
-
-                <div class="footer__links">
-                    <div class="footer__security">
-                        <a href="#" class="footer__security-link">Terms of Service</a>
-                        <a href="#" class="footer__security-link">Privacy Policy</a>
-                        <a href="#" class="footer__security-link">Cookie Policy</a>
-                    </div>
-                    <div class="footer__buttons">
-                        <a href="#"><img src="/src/icons/footer/face.png" alt="facebook"></a>
-                        <a href="#"><img src="/src/icons/footer/twit.png" alt="twiter"></a>
-                        <a href="#"><img src="/src/icons/footer/in.png" alt="in"></a>
-                    </div>
-                </div>
-
-                <div class="footer__bottom">Copyright © [2023] Little Learners Academy. All rights reserved.</div>
-            </div>
-        </div>
-    </footer>
+    {{> footer}}
 
     <script type="module" src="/src/js/script.js"></script>
 </body>

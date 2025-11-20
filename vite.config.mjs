@@ -10,12 +10,16 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
       },
     },
   },
   plugins: [
     handlebars({
-      partialDirectory: './src/html', // путь к частям шаблонов
+      partialDirectory: './src/hbs', // путь к частям шаблонов
+      context: {
+        base: '/LittleLearnes/',
+      },
     }),
   ],
   base: '/LittleLearnes/',
