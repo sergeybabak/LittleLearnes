@@ -1,0 +1,8 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.aboutawards {
+    margin-top: 200px;
+    &__item {
+        @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg"); // chart-bar.svg, bolt.svg
+    }
+}
