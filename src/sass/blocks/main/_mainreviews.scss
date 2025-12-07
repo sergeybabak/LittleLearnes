@@ -1,3 +1,5 @@
+@use "/src/sass/base/mixins.scss" as *;
+
 .mainreviews {
     margin-top: 200px;
 
@@ -10,20 +12,7 @@
 
         .arrow_right,
         .arrow_left {
-            width: 58px;
-            height: 58px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid var(--Grey20);
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-
-            img {
-                width: 16px;
-                height: 16px;
-            }
+            @include sliderArrow;
         }
 
         &__wrapper {

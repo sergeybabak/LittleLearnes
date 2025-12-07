@@ -2,7 +2,72 @@
 
 .aboutawards {
     margin-top: 200px;
+
+    &__slider {
+        position: relative;
+        display: flex;
+        gap: 40px;
+        align-items: stretch;
+        margin-top: 100px;
+        padding-top: 37px;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    &__itembox {
+        width: calc(33% - 25px);
+        height: 98%;
+        flex-shrink: 0;
+        transition: all 0.5s ease-in-out;
+    }
     &__item {
-        @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg"); // chart-bar.svg, bolt.svg
+        height: 92%;
+    }
+
+    &__itembox:nth-child(1) {
+        div {
+            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg");
+        }
+    }
+
+    &__itembox:nth-child(2) {
+        div {
+            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-bar.svg");
+        }
+    }
+
+    &__itembox:nth-child(3) {
+        div {
+            @include boxWithCardBefore("/node_modules/heroicons/16/solid/bolt.svg");
+        }
+    }
+
+    &__itembox:nth-child(4) {
+        div {
+            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg");
+        }
+    }
+
+    &__panel {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-family: Raleway;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        gap: 20px;
+
+        &-left, &-right {
+            @include sliderArrow;
+        }
+
     }
 }

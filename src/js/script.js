@@ -110,4 +110,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    //// ТОЛЬКО ДЛЯ СТРАНИЦЫ ABOUT
+
+    if (page == 'about') {
+        // карусель
+        const carousel = {
+            wrapper: '.aboutawards__slider',
+            left: '.aboutawards__arrows-left',
+            right: '.aboutawards__arrows-right',
+            central: true
+        };
+        new Carousel(carousel);
+    }
+
 });
