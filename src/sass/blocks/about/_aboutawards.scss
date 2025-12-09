@@ -1,8 +1,6 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .aboutawards {
-    margin-top: 200px;
-
     &__slider {
         position: relative;
         display: flex;
@@ -11,7 +9,6 @@
         margin-top: 100px;
         padding-top: 37px;
         overflow: hidden;
-        height: 500px;
     }
 
     &__itembox {
@@ -19,33 +16,57 @@
         height: 98%;
         flex-shrink: 0;
         transition: all 0.5s ease-in-out;
+        height: 409px;
     }
+
     &__item {
         height: 92%;
-    }
+        padding: 80px 50px 50px 50px;
+        color: var(--Grey30);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        position: relative;
 
-    &__itembox:nth-child(1) {
-        div {
-            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg");
+        span {
+            display: block;
+            color: var(--Grey10);
+            font-family: Raleway;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 33px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -37px;
+            left: 30px;
+            width: 74px;
+            height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--Grey15);
+            border-radius: 12px;
         }
     }
 
-    &__itembox:nth-child(2) {
-        div {
-            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-bar.svg");
-        }
+    &__item1::before {
+        background: var(--Orange90) url("/node_modules/heroicons/16/solid/chart-pie.svg") no-repeat center/31px;
     }
 
-    &__itembox:nth-child(3) {
-        div {
-            @include boxWithCardBefore("/node_modules/heroicons/16/solid/bolt.svg");
-        }
+    &__item2::before {
+        background: var(--Orange90) url("/node_modules/heroicons/16/solid/chart-bar.svg") no-repeat center/31px;
     }
 
-    &__itembox:nth-child(4) {
-        div {
-            @include boxWithCardBefore("/node_modules/heroicons/16/solid/chart-pie.svg");
-        }
+    &__item3::before {
+        background: var(--Orange90) url("/node_modules/heroicons/16/solid/bolt.svg") no-repeat center/31px;
+    }
+
+    &__item4::before {
+        background: var(--Orange90) url("/node_modules/heroicons/16/solid/chart-pie.svg") no-repeat center/31px;
     }
 
     &__panel {
@@ -65,9 +86,61 @@
         display: flex;
         gap: 20px;
 
-        &-left, &-right {
+        &-left,
+        &-right {
             @include sliderArrow;
         }
 
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .aboutawards {
+        &__slider {
+            margin-top: 80px;
+            gap: 30px;
+        }
+        &__itembox {
+            width: 400px;
+        }
+        &__item {
+            font-size: 16px;
+            padding: 60px 40px 40px 40px;
+            span {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+            &::before {
+                width: 56px;
+                height: 56px;
+                background-size: 24px;
+            }
+        }
+        &__panel {
+            margin-top: 20px;
+            span {
+                font-size: 18px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutawards {
+        &__slider {
+            margin-top: 50px;
+        }
+        &__itembox {
+            width: 100%;
+            height: 380px;
+        }
+        &__item {
+            padding: 30px 30px 30px 30px;
+            span {
+                font-size: 22px;
+                line-height: 26px;
+            }
+        }
     }
 }

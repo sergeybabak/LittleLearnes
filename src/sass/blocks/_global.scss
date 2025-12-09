@@ -76,3 +76,13 @@ a {
 .is-flex {
     display: flex;
 }
+
+section {
+    margin-top: 200px;
+    @media screen and (max-width: 1440px) {
+        margin-top: 150px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 80px;
+    }
+}

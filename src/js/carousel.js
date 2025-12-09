@@ -46,7 +46,7 @@ export default class Carousel {
             
             if (h.height > maxHeight) maxHeight = h.height;
         })
-        this.addOrUpdateRule(this.container.substr(1), 'height', `${maxHeight}px`);
+        this.addOrUpdateRule(this.container.substr(1), 'height', `${maxHeight + 12}px`);
 
 
         Array.from(this.carouselContainer.children).forEach((item, index) => {
