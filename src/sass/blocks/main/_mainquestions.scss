@@ -2,7 +2,6 @@
     margin-top: 200px;
 
     &__wrapper {
-        margin-top: 100px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 50px;
@@ -82,7 +81,6 @@
         margin-top: 150px;
 
         &__wrapper {
-            margin-top: 80px;
             gap: 24px 40px;
         }
 
@@ -126,7 +124,6 @@
         margin-top: 80px;
 
         &__wrapper {
-            margin-top: 50px;
             grid-template-columns: 100%;
         }
 

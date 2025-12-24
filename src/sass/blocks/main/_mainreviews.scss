@@ -4,7 +4,6 @@
     margin-top: 200px;
 
     .slider {
-        margin-top: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -82,7 +81,6 @@
         margin-top: 150px;
 
         .slider {
-            margin-top: 80px;
             gap: 40px;
 
             .arrow_right,
@@ -127,7 +125,6 @@
 @media screen and (max-width: 1024px) {
     .mainreviews {
         .slider {
-            margin-top: 50px;
             flex-wrap: wrap;
             justify-content: center;
             &__wrapper {
