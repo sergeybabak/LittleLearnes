@@ -1,0 +1,132 @@
+.aboutteam {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 50px;
+    }
+
+    &__item {
+        padding: 50px;
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &-img {
+            width: 100px;
+            height: 100px;
+        }
+
+        &-name {
+            color: var(--Grey20);
+            font-family: Raleway;
+            font-size: 30px;
+            font-weight: 800;
+            flex: 1;
+            text-align: left;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border: 2px solid var(--Grey15);
+            border-radius: 8px;
+            background: var(--Orange90);
+            cursor: pointer;
+        }
+
+        &-bottom {
+            margin-top: 30px;
+            padding: 30px;
+            border: 2px solid var(--Grey15);
+            border-radius: 12px;
+            background: var(--Orange97);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .aboutteam {
+        &__wrapper {
+            gap: 40px;
+        }
+        &__item {
+            padding: 40px;
+            &-img {
+                width: 80px;
+                height: 80px;
+            }
+            &-name {
+                font-size: 24px;
+            }
+            &-btn {
+                width: 48px;
+                height: 48px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &-bottom {
+                margin-top: 24px;
+                padding: 24px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &-title {
+                font-size: 20px;
+                margin-bottom: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutteam {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutteam {
+        &__item {
+            &-top {
+                gap: 10px;
+            }
+            padding: 20px;
+            &-img {
+                width: 60px;
+                height: 60px;
+            }
+            &-name {
+                font-size: 20px;
+            }
+            &-bottom {
+                padding: 20px;
+            }
+            &-title {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
