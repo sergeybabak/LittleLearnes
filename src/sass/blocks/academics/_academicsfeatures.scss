@@ -1,0 +1,48 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.academicsfeatures {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 50px;
+    }
+    &__item {
+        
+        &:nth-child(1) {
+            @include boxWithCardBefore('/src/icons/academics/01.png');
+        }
+
+        &:nth-child(2) {
+            @include boxWithCardBefore('/src/icons/main/02.png');
+        }
+
+        &:nth-child(3) {
+            @include boxWithCardBefore('/src/icons/main/03.png');
+        }
+
+        &:nth-child(4) {
+            @include boxWithCardBefore('/src/icons/main/04.png');
+        }
+
+        &:nth-child(5) {
+            @include boxWithCardBefore('/src/icons/main/05.png');
+        }
+
+        &:nth-child(6) {
+            @include boxWithCardBefore('/src/icons/main/06.png');
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+}

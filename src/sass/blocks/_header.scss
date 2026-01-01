@@ -168,12 +168,18 @@ header {
 
             li {
                 height: 100%;
-                padding: 20px clamp(25px, 1.7vw, 34px);
+                width: 100%;
                 border-left: 2px solid var(--Grey15);
-                display: flex;
-                align-items: center;
-                cursor: pointer;
                 white-space: nowrap;
+
+                a {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0 20px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
 
                 &:last-child {
                     background: var(--Orange75);
@@ -220,6 +226,7 @@ header {
             &-active {
                 .hamburger__block {
                     z-index: 2;
+
                     span {
                         background: white;
                     }
@@ -292,9 +299,11 @@ header {
                 li {
                     border: none;
                     height: auto;
-                    padding: 2% 0;
                     width: 50%;
-                    justify-content: center;
+                    a {
+                        padding: 2% 0;
+                        justify-content: center;
+                    }
                 }
             }
 

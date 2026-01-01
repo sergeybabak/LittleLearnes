@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
         case 'about': menuItem = 1;
         break;
+        case 'academics': menuItem = 2;
+        break;
     }
     navbarListItems[menuItem].classList.add('navbar__menu-active');
 

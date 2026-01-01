@@ -15,10 +15,6 @@
             @include boxWithCardBefore('/src/icons/main/01.png');
         }
 
-        &:nth-child(1) {
-            @include boxWithCardBefore('/src/icons/main/01.png');
-        }
-
         &:nth-child(2) {
             @include boxWithCardBefore('/src/icons/main/02.png');
         }
