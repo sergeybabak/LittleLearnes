@@ -1,0 +1,230 @@
+.academicsgallery {
+    &__tabs {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 150px;
+    }
+
+    &__tab {
+        cursor: pointer;
+
+        &-active {
+            background: var(--Orange95);
+        }
+    }
+
+    &__classrooms,
+    &__library,
+    &__science,
+    &__computer,
+    &__nature {
+
+        &-box {
+            width: 100%;
+            transform: translateY(-152px);
+            padding: 200px 50px 50px 50px;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+
+        &-panel {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                font-family: Raleway;
+                font-size: 40px;
+                font-weight: 700;
+            }
+        }
+
+        &-arrows {
+            display: flex;
+            gap: 20px;
+        }
+
+        &-left,
+        &-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--Grey20);
+            border-radius: 8px;
+            background: white;
+            width: 58px;
+            height: 58px;
+            cursor: pointer;
+            user-select: none; // Отменяет выделение внутри кнопки
+        }
+
+        &-slider {
+            position: relative;
+            width: calc(100% - 100px);
+            left: 50%;
+            // height: 304px;
+            transform: translateX(-50%);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        &-wrapper {
+            height: 100%;
+            display: flex;
+            gap: 40px;
+        }
+
+        &-img {
+            flex: 0 0 calc((100% - 120px) / 4);
+            height: 304px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            pointer-events: none;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+[data-page="academics"] .footer {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+    .academicsgallery {
+
+        &__classrooms,
+        &__library,
+        &__science,
+        &__computer,
+        &__nature {
+            &-img {
+                height: 234px;
+            }
+
+            &-box {
+                padding: 150px 40px 40px 40px;
+                transform: translateY(-117px);
+            }
+
+            &-panel {
+                font-size: 20px;
+                margin-bottom: 30px;
+
+                span {
+                    font-size: 34px;
+                }
+            }
+
+            &-left,
+            &-right {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .academicsgallery {
+
+        &__classrooms,
+        &__library,
+        &__science,
+        &__computer,
+        &__nature {
+            &-wrapper {
+                gap: 20px;
+            }
+
+            &-img {
+                flex: 0 0 calc((100% - 20px) / 2);
+                height: 300px;
+            }
+
+            &-box {
+                padding: 200px 40px 40px 40px;
+                transform: translateY(-150px);
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .academicsgallery {
+
+        &__classrooms,
+        &__library,
+        &__science,
+        &__computer,
+        &__nature {
+
+            &-img {
+                height: 200px;
+            }
+
+            &-box {
+                padding: 140px 30px 30px 30px;
+                transform: translateY(-100px);
+            }
+
+            &-panel {
+                font-size: 16px;
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .academicsgallery {
+
+        &__tabs {
+            margin-bottom: 80px;
+        }
+
+        &__classrooms,
+        &__library,
+        &__science,
+        &__computer,
+        &__nature {
+            &-panel {
+                flex-direction: column;
+                gap: 20px;
+
+                span {
+                    order: 1;
+                }
+            }
+
+            &-img {
+                flex: 0 0 100%;
+            }
+
+            &-box {
+                transform: translateY(-100px);
+            }
+
+        }
+
+    }
+}

@@ -1,5 +1,6 @@
 import '../sass/style.scss';
 import Carousel from "./carousel.js";
+import Slider from "./simpleSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -23,11 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // переходим на нужный пункт меню в зависимости от страницы
     switch (page) {
         case 'main': menuItem = 0;
-        break;
+            break;
         case 'about': menuItem = 1;
-        break;
+            break;
         case 'academics': menuItem = 2;
-        break;
+            break;
     }
     navbarListItems[menuItem].classList.add('navbar__menu-active');
 
@@ -125,4 +126,71 @@ document.addEventListener("DOMContentLoaded", () => {
         new Carousel(carousel);
     }
 
+    //// ТОЛЬКО ДЛЯ СТРАНИЦЫ ACADEMICS
+
+    if (page == 'academics') {
+        // карусель 1
+        const dataClassrooms = {
+            wrapper: '.academicsgallery__classrooms-slider',
+            prev: '.academicsgallery__classrooms-left',
+            next: '.academicsgallery__classrooms-right'
+        };
+
+        // карусель 2
+        const dataLibrary = {
+            wrapper: '.academicsgallery__library-slider',
+            prev: '.academicsgallery__library-left',
+            next: '.academicsgallery__library-right'
+        }
+
+        // карусель 3
+        const dataScience = {
+            wrapper: '.academicsgallery__science-slider',
+            prev: '.academicsgallery__science-left',
+            next: '.academicsgallery__science-right'
+        }
+
+        // карусель 4
+        const dataComputer = {
+            wrapper: '.academicsgallery__computer-slider',
+            prev: '.academicsgallery__computer-left',
+            next: '.academicsgallery__computer-right'
+        }
+
+        // карусель 5
+        const dataNature = {
+            wrapper: '.academicsgallery__nature-slider',
+            prev: '.academicsgallery__nature-left',
+            next: '.academicsgallery__nature-right'
+        }
+
+        new Slider(dataClassrooms);
+        new Slider(dataLibrary);
+        new Slider(dataScience);
+        new Slider(dataComputer);
+        new Slider(dataNature);
+
+        // tabs
+        const tabs = document.querySelectorAll('.academicsgallery__tab'),
+              items = document.querySelectorAll('[data-item]');
+
+        function setTabItem(i) {
+            items.forEach((it, j) => {
+                (i - 1 !== j && i) ? it.style.display = 'none' : it.style.removeProperty('display');
+                
+            });
+            tabs.forEach((tab, j) => {
+                i !== j ? tab.classList.remove('academicsgallery__tab-active') : tab.classList.add('academicsgallery__tab-active');
+            });
+        };
+
+        tabs.forEach((el, i) => {
+            el.addEventListener('click', (e) => {
+                setTabItem(i);
+            })
+        })
+    }
+
 });
+
+
