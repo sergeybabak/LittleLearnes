@@ -1,0 +1,14 @@
+@use '/src/sass/base/mixins' as *;
+
+.admissinprocess {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+    &__item {
+        &:nth-child(1) {
+            @include boxWithCardBefore('/src/icons/academics/01.png');
+        }
+    }
+}
