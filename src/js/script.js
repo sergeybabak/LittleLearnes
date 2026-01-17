@@ -13,6 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
         if (document.body.classList.contains('preload')) document.body.classList.remove('preload');
     });
 
+    // стрелочка для прокрутки экрана в начало
+    const scrollToTopBtn = document.querySelector('.to-top');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const screenHeight = window.innerHeight;
+
+        if (scrollPosition > screenHeight * 1.5) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    });
+
     // меню
     const navbar = document.querySelector('.navbar__wrapper'),
         hamburger = document.querySelector('.hamburger'),
@@ -172,12 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // tabs
         const tabs = document.querySelectorAll('.academicsgallery__tab'),
-              items = document.querySelectorAll('[data-item]');
+            items = document.querySelectorAll('[data-item]');
 
         function setTabItem(i) {
             items.forEach((it, j) => {
                 (i - 1 !== j && i) ? it.style.display = 'none' : it.style.removeProperty('display');
-                
+
             });
             tabs.forEach((tab, j) => {
                 i !== j ? tab.classList.remove('academicsgallery__tab-active') : tab.classList.add('academicsgallery__tab-active');
