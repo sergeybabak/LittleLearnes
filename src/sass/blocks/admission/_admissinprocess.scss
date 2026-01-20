@@ -4,11 +4,156 @@
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
+        gap: 100px 50px;
     }
+
     &__item {
-        &:nth-child(1) {
-            @include boxWithCardBefore('/src/icons/academics/01.png');
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__number {
+        color: var(--Grey10);
+        font-family: Raleway;
+        font-size: 60px;
+        font-weight: 800;
+        padding: 20px 30px;
+        width: fit-content;
+    }
+
+    &__lineorange {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 12px;
+        height: 69px;
+        background: var(--Orange80);
+        flex-shrink: 0;
+
+        span {
+            display: block;
+            height: inherit;
+            width: 2px;
+            background: #000;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--Grey15);
+            background: white;
+            border-radius: 50%;
+            top: -7px;
+            z-index: 1;
+        }
+    }
+
+    &__box {
+        padding: 50px;
+        flex: 1;
+        color: var(--Grey30);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        position: relative;
+
+        span {
+            display: block;
+            color: var(--Grey10);
+            font-family: Raleway;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .admissinprocess {
+        &__wrapper {
+            gap: 80px 40px;
+        }
+
+        &__number {
+            padding: 10px 24px;
+            font-size: 44px;
+        }
+
+        &__lineorange {
+            height: 43px;
+        }
+
+        &__box {
+            padding: 40px;
+            font-size: 16px;
+
+            span {
+                margin-bottom: 16px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .admissinprocess__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admissinprocess {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            gap: 63px;
+        }
+
+        &__item {
+            align-items: center;
+        }
+
+        &__number {
+            font-size: 40px;
+        }
+
+        &__box {
+            position: relative;
+            padding: 30px;
+
+            span {
+                margin-bottom: 14px;
+                font-size: 26px;
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                bottom: -65px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 12px;
+                height: 58px;
+                background: var(--Orange80);
+            }
+            &::after {
+                width: 2px;
+                background: black;
+            }
+        }
+        &__box.last-child {
+            &::after, &::before {
+                display: none;
+            }
         }
     }
 }

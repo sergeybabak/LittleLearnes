@@ -104,4 +104,17 @@ section {
         height: 100%;
         cursor: pointer;
     }
+    @media screen and (max-width: 768px) {
+        right: 40px;
+    }
+    @media screen and (max-width: 576px) {
+        right: 20px;
+        width: 80px;
+        height: 80px;
+    }
+    @media screen and (max-width: 390px) {
+        right: 10px;
+        width: 60px;
+        height: 60px;
+    }
 }

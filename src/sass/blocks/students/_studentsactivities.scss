@@ -1,0 +1,51 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.studentsactivities {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px 40px;
+    }
+
+    &__item {
+        &:nth-child(1) {
+            @include boxWithCardBefore('/src/icons/heroicons/bolt24.svg');
+        }
+
+        &:nth-child(2) {
+            @include boxWithCardBefore('/src/icons/heroicons/paint-brush24.svg');
+        }
+
+        &:nth-child(3) {
+            @include boxWithCardBefore('/src/icons/heroicons/musical-note24.svg');
+        }
+
+        &:nth-child(4) {
+            @include boxWithCardBefore('/src/icons/heroicons/puzzle-piece24.svg');
+        }
+
+        &:nth-child(5) {
+            @include boxWithCardBefore('/src/icons/heroicons/beaker24.svg');
+        }
+
+        &:nth-child(6) {
+            @include boxWithCardBefore('/src/icons/heroicons/sparkles24.svg');
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        &__wrapper {
+            gap: 40px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}

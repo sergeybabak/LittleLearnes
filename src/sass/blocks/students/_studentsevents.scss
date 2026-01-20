@@ -1,0 +1,19 @@
+.studentsevents {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 1440px) {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}

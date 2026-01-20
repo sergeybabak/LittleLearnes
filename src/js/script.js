@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
             break;
         case 'academics': menuItem = 2;
             break;
+        case 'admission': menuItem = 3;
+            break;
+        case 'students': menuItem = 4;
+            break;
     }
     navbarListItems[menuItem].classList.add('navbar__menu-active');
 
