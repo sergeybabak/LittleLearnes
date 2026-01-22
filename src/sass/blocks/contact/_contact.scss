@@ -1,0 +1,228 @@
+.contact {
+    &__box {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        &-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid var(--Grey15);
+            border-radius: 12px;
+            background: var(--Orange99);
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        &-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--Grey15);
+            border-radius: 6px;
+            background: var(--Orange97);
+            width: 40px;
+            height: 40px;
+        }
+
+        &-img {
+            width: 24px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        &__box {
+            gap: 20px;
+
+            &-item {
+                padding: 16px;
+                font-size: 16px;
+            }
+
+            &-logo {
+                width: 32px;
+                height: 32px;
+            }
+
+            &-img {
+                width: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__box {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.contactform {
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        transform: translateY(50%);
+
+        &-item {
+            border: 2px solid var(--Grey15);
+            border-radius: 8px;
+            background: var(--Orange90);
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+        }
+
+        &-img {
+            width: 34px;
+        }
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        padding: 120px 100px 100px 100px;
+
+        &-field {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            label {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            input,
+            textarea,
+            select {
+                border: 2px solid var(--Grey15);
+                border-radius: 8px;
+                background: var(--Orange99);
+                padding: 30px;
+                color: var(--Grey35);
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            textarea {
+                height: 218px;
+                resize: none;
+            }
+        }
+
+        &-message,
+        &-btn {
+            grid-column: 1 / 3;
+        }
+
+        &-btn {
+            border: 2px solid var(--Grey15);
+            border-radius: 12px;
+            background: var(--Orange75);
+            padding: 30px 34px;
+            font-size: 24px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        span {
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            color: red;
+            display: none;
+        }
+        &-error {
+            input {
+                border-color: red;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        &__social {
+            &-item {
+                padding: 16px 50px;
+            }
+
+            &-img {
+                width: 26px;
+            }
+        }
+
+        &__form {
+            gap: 40px;
+            padding: 100px 80px 80px 80px;
+
+            &-field {
+                label {
+                    font-size: 20px;
+                }
+
+                input,
+                textarea,
+                select {
+                    padding: 24px;
+                    font-size: 16px;
+                }
+
+                textarea {
+                    height: 161px;
+                }
+            }
+
+            &-btn {
+                padding: 24px 34px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__form {
+            gap: 20px;
+            padding: 80px 30px 50px 30px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__social {
+            &-item {
+                padding: 16px 24px;
+            }
+        }
+
+        &__form {
+            gap: 30px;
+            grid-template-columns: 1fr;
+
+            &-message,
+            &-btn {
+                grid-column: 1
+            }
+
+            &-field {
+                input,
+                textarea,
+                select {
+                    padding: 20px;
+                }
+            }
+
+            &-btn {
+                padding: 16px 34px;
+            }
+        }
+    }
+}

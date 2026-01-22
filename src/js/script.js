@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
             break;
         case 'students': menuItem = 4;
             break;
+        case 'contact': menuItem = 5;
+            break;
     }
     navbarListItems[menuItem].classList.add('navbar__menu-active');
 
@@ -212,6 +214,31 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    //// ТОЛЬКО ДЛЯ СТРАНИЦЫ contact
+
+    if (page == 'contact') {
+        const form = document.querySelector('.contactform__form'),
+            inputs = form.querySelectorAll('input');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            inputs.forEach((item, i) => {
+                if (!item.validity.valid) {
+                    item.parentElement.classList.add('contactform__form-field');
+                };
+            });
+
+            const formData = new FormData(form);
+
+            const data = Object.fromEntries(formData.entries());
+
+            const json = JSON.stringify(data);
+
+            console.log(json);      // строка JSON
+            console.log(data);
+        })
+    }
 });
 
 

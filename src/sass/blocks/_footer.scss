@@ -95,7 +95,9 @@
         gap: 14px;
 
         a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 56px;
             height: 56px;
             padding: 16px;

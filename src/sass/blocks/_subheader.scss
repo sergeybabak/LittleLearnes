@@ -2,7 +2,7 @@
     position: relative;
     margin-top: 60px;
 
-    img {
+    &__img {
         position: absolute;
         margin: 2px;
         width: 200px;
@@ -48,7 +48,7 @@
             padding: 100px 80px;
         }
 
-        img {
+        &__img {
             width: 137px;
             height: 137px;
         }
@@ -70,7 +70,7 @@
             padding: 50px 30px;
             gap: 20px;
         }
-        img {
+        &__img {
             width: 100px;
             height: 100px;
         }

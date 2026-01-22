@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Learnes Academy - Contact</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/src/icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/src/icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/src/icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/src/icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/src/icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/src/icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/src/icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/src/icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/src/icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/src/icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/src/icons/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="preload" data-page="contact">
+
+    <div class="olerlay"></div>
+
+    {{> header }}
+
+    {{> to-top }}
+
+    <section class="subheader">
+        <div class="container-top">
+            <img src="/src/img/AbstractDesign3.png" alt="Abstracspanesign" class="subheader__img">
+
+            <div class="subheader__wrapper box_blackshadow">
+                <div class="subheader__titleblock">
+                    <div class="title-box">Contact Us</div>
+                    <h1 class="subheader__title">Feel Free To Connect With Us</h1>
+                </div>
+                <div class="subheader__descrblock">
+                    We value open communication and are eager to assist you with any inquiries. Feel free to reach out
+                    to us through any of the following contact methods
+                    <div class="contact__box">
+                        <a href="javascript:void(0)" class="contact__box-item">
+                            <div class="contact__box-logo">
+                                <img src="/src/icons/heroicons/envelope24.svg" alt="envelope" class="contact__box-img">
+                            </div>
+                            hello@littlelearners.com
+                        </a>
+                        <a href="javascript:void(0)" class="contact__box-item">
+                            <div class="contact__box-logo">
+                                <img src="/src/icons/heroicons/phone24.svg" alt="phone" class="contact__box-img">
+                            </div>
+                            +91 91813 23 2309
+                        </a>
+                        <a href="javascript:void(0)" class="contact__box-item">
+                            <div class="contact__box-logo">
+                                <img src="/src/icons/heroicons/map-pin24.svg" alt="map-pin" class="contact__box-img">
+                            </div>
+                            Somewhere in the World
+                        </a>
+                        <a href="javascript:void(0)" class="contact__box-item">
+                            <div class="contact__box-logo">
+                                <img src="/src/icons/heroicons/clock24.svg" alt="clock" class="contact__box-img">
+                            </div>
+                            Office Hours - 9am - 6 pm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact">
+        <div class="container">
+            <section id="info" class="contactinfo">
+                <div class="title-box">Contact Form</div>
+                <h1 class="title-h2">Student Information</h1>
+                <div class="title-sub">
+                    If you have specific questions or wish to request more information about Little Learners Academy,
+                    please complete the contact form below. Kindly provide the following details to help us better
+                    understand your needs
+                </div>
+
+                <div class="contactform">
+                    <div class="contactform__social">
+                        <a href="javascript:void(0)" class="contactform__social-item">
+                            <img src="/src/icons/footer/face.png" alt="facebook-icon" class="contactform__social-img">
+                        </a>
+                        <a href="javascript:void(0)" class="contactform__social-item">
+                            <img src="/src/icons/footer/twit.png" alt="twiter-icon" class="contactform__social-img">
+                        </a>
+                        <a href="javascript:void(0)" class="contactform__social-item">
+                            <img src="/src/icons/footer/in.png" alt="linket-icon" class="contactform__social-img">
+                        </a>
+                    </div>
+
+                    <form class="box_blackshadow contactform__form">
+                        <div class="contactform__form-field">
+                            <label for="pname">Parent Name</label>
+                            <input type="text" id="pname" name="pname" placeholder="Enter Parent Name" required>
+                            <span>Parent Name (min 2 char)</span>
+                        </div>
+                        <div class="contactform__form-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                            <span>Enter your Email</span>
+                        </div>
+                        <div class="contactform__form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" pattern="\+?\d{10,}" placeholder="Enter Phone Number" required>
+                            <span>Enter your Phone (+XXXXXXXXXXX)</span>
+                        </div>
+                        <div class="contactform__form-field">
+                            <label for="sname">Student Name</label>
+                            <input type="text" id="sname" name="sname" placeholder="Enter Student Name" required>
+                            <span>Enter your Student Name</span>
+                        </div>
+                        <div class="contactform__form-field">
+                            <label for="age">Student Age</label>
+                            <input type="number" id="age" name="age" placeholder="Enter Student Age" required>
+                            <span>Enter your Student Age</span>
+                        </div>
+                        <div class="contactform__form-field">
+                            <label for="interest">Program of Intrest</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select Program</option>
+                                <option value="kyiv">Киев</option>
+                                <option value="lviv">Львов</option>
+                                <option value="odesa">Одесса</option>
+                            </select>
+                        </div>
+                        <div class="contactform__form-field contactform__form-message">
+                            <label for="age">Message</label>
+                            <textarea name="message" id="message" placeholder="Enter your Message"></textarea>
+                        </div>
+                        <button type="submit" class="contactform__form-btn">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    {{> footer}}
+
+    <script type="module" src="/src/js/script.js"></script>
+</body>
+
+</html>
