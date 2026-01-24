@@ -102,8 +102,7 @@
             }
 
             input,
-            textarea,
-            select {
+            textarea {
                 border: 2px solid var(--Grey15);
                 border-radius: 8px;
                 background: var(--Orange99);
@@ -111,6 +110,35 @@
                 color: var(--Grey35);
                 font-size: 20px;
                 font-weight: 500;
+                width: 100%;
+            }
+            #interest {
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                bottom: -120%;
+                width: 100%;
+                z-index: 1;
+            }
+
+            li {
+                border: 2px solid var(--Grey15);
+                border-bottom: none;
+                padding: 10px;
+                cursor: pointer;
+                background: var(--Orange90);
+                &:first-child {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+                &:last-child {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    border-bottom: 2px solid var(--Grey15);
+                }
             }
 
             textarea {
@@ -146,6 +174,22 @@
             }
             span {
                 display: block;
+            }
+        }
+        .interest {
+            
+            &-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex: 1 1 100%;
+                cursor: pointer;
+            }
+            &-arrow {
+                position: absolute;
+                right: 20px;
+                width: 30px;
+                height: 30px;
             }
         }
     }

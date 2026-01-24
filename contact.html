@@ -99,40 +99,48 @@
                         </a>
                     </div>
 
-                    <form class="box_blackshadow contactform__form">
-                        <div class="contactform__form-field">
+                    <form class="box_blackshadow contactform__form" novalidate>
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="pname">Parent Name</label>
                             <input type="text" id="pname" name="pname" placeholder="Enter Parent Name" required>
                             <span>Parent Name (min 2 char)</span>
                         </div>
-                        <div class="contactform__form-field">
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
                             <span>Enter your Email</span>
                         </div>
-                        <div class="contactform__form-field">
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" pattern="\+?\d{10,}" placeholder="Enter Phone Number" required>
+                            <input type="tel" id="phone" name="phone" pattern="\+?\d{10,}"
+                                placeholder="Enter Phone Number" required>
                             <span>Enter your Phone (+XXXXXXXXXXX)</span>
                         </div>
-                        <div class="contactform__form-field">
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="sname">Student Name</label>
                             <input type="text" id="sname" name="sname" placeholder="Enter Student Name" required>
                             <span>Enter your Student Name</span>
                         </div>
-                        <div class="contactform__form-field">
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="age">Student Age</label>
-                            <input type="number" id="age" name="age" placeholder="Enter Student Age" required>
-                            <span>Enter your Student Age</span>
+                            <input type="text" id="age" name="age" inputmode="numeric" pattern="[0-50]" placeholder="Enter Student Age" required>
+                            <span>Enter your Student Age (number)</span>
                         </div>
-                        <div class="contactform__form-field">
+                        <div class="contactform__form-field contactform__form-required">
                             <label for="interest">Program of Intrest</label>
-                            <select id="interest" name="interest">
-                                <option value="">Select Program</option>
-                                <option value="kyiv">Киев</option>
-                                <option value="lviv">Львов</option>
-                                <option value="odesa">Одесса</option>
-                            </select>
+                            <div class="interest-wrapper">
+                                <input type="text" id="interest" name="interest" placeholder="Select Program" required >
+                                <div class="interest-arrow">
+                                    <img src="/src/icons/heroicons/chevron-down24.svg" alt="arrow-down">
+                                </div>
+                            </div>
+                            <ul>
+                                <li>00</li>
+                                <li>01</li>
+                                <li>02</li>
+                                <li>03</li>
+                            </ul>
+                            <span>Select Program</span>
                         </div>
                         <div class="contactform__form-field contactform__form-message">
                             <label for="age">Message</label>

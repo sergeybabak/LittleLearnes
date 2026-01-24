@@ -218,25 +218,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (page == 'contact') {
         const form = document.querySelector('.contactform__form'),
-            inputs = form.querySelectorAll('input');
+            inputs = form.querySelectorAll('.contactform__form-required');
 
+        // выбор программы из списка
+        const comboBox = form.querySelector('#interest'),
+            comboList = form.querySelector('ul');
+        comboBox.addEventListener('click', () => {
+            comboList.style.display === 'block' ? comboList.style.removeProperty('display') : comboList.style.display = 'block';
+        });
+
+        comboList.querySelectorAll('li').forEach((item) => {
+            item.addEventListener('click', (e) => {
+                comboBox.value = e.target.innerText;
+                comboList.style.removeProperty('display')
+            });
+        });
+
+        // отправка формы
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            inputs.forEach((item, i) => {
-                if (!item.validity.valid) {
-                    item.parentElement.classList.add('contactform__form-field');
-                };
+            let isValidForm = true;
+
+            inputs.forEach((item) => {
+                const itemInput = item.querySelector('input');
+                // убираем ошибку при клике на input
+                itemInput.addEventListener('click', () => {
+                    item.classList.remove('contactform__form-error');
+                });
+
+                if (!itemInput.validity.valid) {
+                    item.classList.add('contactform__form-error');
+                    isValidForm = false;
+                }
             });
 
-            const formData = new FormData(form);
+            if (!isValidForm) return;
 
+            const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            const json = JSON.stringify(data);
-
-            console.log(json);      // строка JSON
             console.log(data);
+            alert('Data sent:\n' + JSON.stringify(data, null, 2));
         })
     }
 });
